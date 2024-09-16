@@ -1,0 +1,13 @@
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - "7000:7000"
+    env_file: 
+      - .env  
